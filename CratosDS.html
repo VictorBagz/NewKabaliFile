@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cratos Building Construction Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        /* Reset and General Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            background: white;
+            color: #1f267d;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #img1 {
+            width: 80px;
+            height: 70px;
+        }
+
+        /* Hero Section */
+        #home {
+            background: url('Bd6.jpg') no-repeat center fixed;
+            background-size: cover;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        #h1 {
+            background-color: rgba(17, 27, 104, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .btn0, .btn1 {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn0 {
+            background-color: #ff7e15;
+            color: white;
+        }
+
+        .btn1 {
+            background-color: white;
+            color: #1f267d;
+            margin: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn1:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Accordion */
+        .accordn {
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .accordn-item {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordn-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #1f267d;
+            color: white;
+            cursor: pointer;
+        }
+
+        .accordn-header:hover {
+            background: #17206d;
+        }
+
+        .accordn-content {
+            display: none;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+
+        .accordn-content.open {
+            display: block;
+        }
+
+        /* Gallery */
+        .gallery-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .gallery-item {
+            flex: 0 0 auto;
+            width: 300px;
+            height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Form */
+        form {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1f267d;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background: #111b68c6;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .footer-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-list li {
+            margin-bottom: 10px;
+        }
+
+        .footer-list a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-list a:hover {
+            color: #4a90e2;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="Logo2.jpg" alt="CratosLogo" id="img1">
+        <h2>CRATOS BUILDING SOLUTIONS</h2>
+        <i class="bi bi-list"></i>
+    </nav>
+
+    <div id="home" class="fade-in">
+        <h1 id="h1">"Quality In Every Foundation"
+            <button class="btn0">Learn More 》</button>
+        </h1>
+        <button class="btn1">
+            <h1>PROJECTS</h1>
+            <p class="counter" data-target="200">0</p>
+        </button>
+        <button class="btn1">
+            <h1>CLIENTS</h1>
+            <p class="counter" data-target="99">0</p>
+        </button>
+    </div>
+
+    <div id="about" class="fade-in">
+        <h1>About Us</h1>
+        <div class="accordn">
+            <!-- Accordion Items -->
+            <div class="accordn-item">
+                <div class="accordn-header">
+                    <span>MISSION</span>
+                    <span class="icon">+</span>
+                </div>
+                <div class="accordn-content">
+                    <h2>OUR MISSION</h2>
+                    <p>"To provide innovative, sustainable, and high-quality construction and design services..."</p>
+                </div>
+            </div>
+            <!-- Add other accordion items here -->
+        </div>
+    </div>
+
+    <div id="projects" class="fade-in">
+        <h1>Project Portfolio</h1>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="Bd14.jpg" alt="Photo 1">
+            </div>
+            <!-- Add other gallery items here -->
+        </div>
+    </div>
+
+    <form class="fade-in">
+        <h2>Quote Request</h2>
+        <label>Name:</label>
+        <input type="text" placeholder="Your name...">
+        <label>Email:</label>
+        <input type="email" placeholder="Your e-mail...">
+        <label>Tel:</label>
+        <input type="number" placeholder="123-4567-890...">
+        <label>Comment:</label>
+        <textarea placeholder="Your comment..."></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+    <footer class="fade-in">
+        <div class="footer-content">
+            <img src="LogoNew.jpg" alt="Company Logo" class="footer-logo">
+            <h3>Contact Us</h3>
+            <ul class="footer-list">
+                <li>Managing Director: 0789512738</li>
+                <li>Email: <a href="mailto:masembeg4@gmail.com">masembeg4@gmail.com</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Accordion
+        document.querySelectorAll('.accordn-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('.icon');
+
+                content.classList.toggle('open');
+                icon.textContent = content.classList.contains('open') ? '-' : '+';
+            });
+        });
+
+        // JavaScript for Counter Animation
+        document.querySelectorAll('.counter').forEach(counter => {
+            const updateCounter = () => {
+                const target = +counter.dataset.target;
+                const current = +counter.innerText;
+                const increment = target / 200;
+                if (current < target) {
+                    counter.innerText = Math.ceil(current + increment);
+                    setTimeout(updateCounter, 10);
+                }
+            };
+            updateCounter();
+        });
+
+        // Add fade-in animation to all sections
+        document.querySelectorAll('.fade-in').forEach(section => {
+            section.style.opacity = '0';
+            setTimeout(() => {
+                section.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
